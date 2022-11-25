@@ -1,0 +1,40 @@
+{
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.2.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^1.3.1",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "svelte": "^3.38.1",
+    "svelte-loader": "^3.1.1",
+    "ts-loader": "^9.1.1",
+    "typescript": "^4.2.3",
+    "webpack": "^5",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "worker-loader": "^3.0.8",
+    "mini-css-extract-plugin": "^1.5.1",
+    "workbox-webpack-plugin": "^6.1.2"
+  },
+  "//note": "Don't remove js-xxhash despite it being unused, so it's included in the license disclaimer",
+  "dependencies": {
+    "chart.js": "^3.2.0",
+    "dexie": "^3.0.3",
+    "flatpickr": "^4.6.9",
+    "humanize-duration": "^3.23.1",
+    "js-xxhash": "^1.0.4",
+    "moment": "^2.29.1",
+    "svelte-routing": "^1.6.0",
+    "workbox-precaching": "^6.1.2"
+  },
+  "scripts": {
+    "build": "./build.sh && webpack",
+    "start": "./build.sh && webpack serve --host 0.0.0.0",
+    "test": "cargo test && wasm-pack test --headless",
+    "bundlesize": "./node_modules/.bin/webpack --json > stats.json && webpack-bundle-analyzer stats.json"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "license": "Apache-2.0"
+}
